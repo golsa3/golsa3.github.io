@@ -1,100 +1,95 @@
+/* General */
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #fdf6f9;
-  color: #333; 
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #fff;
 }
 
+/* Header */
 .hero {
-  background: linear-gradient(135deg, #d63384, #ff80b5);
-  color: #fff;
-  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f9b4d0, #f8cdda);
+  padding: 60px 20px;
   text-align: center;
 }
 
 .name {
   font-size: 3rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-  color: #fff4f8;
+  color: #1a1a40; /* deep navy for contrast */
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .statement {
-  font-size: 1rem;
-  margin: 1rem auto;
-  max-width: 700px;
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 25px;
   line-height: 1.6;
 }
 
 .highlight {
-  background: #fff;
-  color: #d63384;
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-  font-style: italic;
+  background: linear-gradient(90deg, #d16ba5, #f9b4d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 .contact-links {
-  margin-top: 1.2rem;
   font-size: 0.95rem;
+  color: #333;
 }
 
-.contact-links a {
-  color: #fff;
+.contact-links a, .contact-links span {
+  margin: 0 5px;
   text-decoration: none;
-  margin: 0 0.5rem;
-  font-weight: 500;
+  color: #1a1a40;
 }
 
 .contact-links a:hover {
   text-decoration: underline;
 }
 
+/* Projects */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 h2 {
+  color: #333;
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #d63384;
+  margin-bottom: 30px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .card {
   background: #fff;
   border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .icon {
-  margin-bottom: 0.8rem;
-  color: #d63384;
+  color: #d16ba5;
+  margin-bottom: 12px;
 }
-
-a {
-  color: #d63384;
-  font-weight: 600;
-}
- 
