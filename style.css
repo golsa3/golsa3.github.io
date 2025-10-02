@@ -1,84 +1,45 @@
-/* General */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background: #fff;
+/* Container: centers content and limits width */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Header */
+/* HERO (keep your pink) */
 .hero {
-  background: #fff06292; 
+  background: #f7a7c0; /* darker but professional pink */
   padding: 60px 20px;
   text-align: center;
-  color: #fff;
+  color: #1a1a40;       /* dark text for contrast */
 }
+
+/* ONE highlight rule only (no gradient) */
 .highlight {
-  color: #ff4f91; /* solid bold pink, no gradient */
+  color: #c63d7b;       /* solid pink accent */
   font-weight: 600;
 }
 
-.name {
-  font-size: 3rem;
-  color: #1a1a40; /* deep navy for contrast */
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.statement {
-  font-size: 1.05rem;
-  color: #444;
-  max-width: 800px;
-  margin: 0 auto 25px;
-  line-height: 1.6;
-}
-
-.highlight {
-  background: linear-gradient(90deg, #d16ba5, #f9b4d0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-}
-
-.contact-links {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.contact-links a, .contact-links span {
-  margin: 0 5px;
-  text-decoration: none;
-  color: #1a1a40;
-}
-
-.contact-links a:hover {
-  text-decoration: underline;
-}
-
-/* Projects */
+/* Projects section background */
 #projects {
-  background: #fde4ec; /* light blush pink */
-  padding: 50px 20px;
+  background: #fde4ec;          /* light blush pink */
+  padding: 50px 0;
   border-top: 2px solid #f9c5d5;
   border-bottom: 2px solid #f9c5d5;
 }
 
-#projects h2 {
-  color: #1a1a40;
-  margin-bottom: 30px;
+/* Responsive grid for cards */
+#projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;                     /* space between cards */
+  align-items: stretch;
 }
 
-/* Project cards */
+/* Cards */
 .card {
-  background: #fffdfd; /* soft off-white, warmer than pure white */
-  border-radius: 12px;
-  padding: 20px;
+  background: #fffdfd;           /* warm off-white */
+  border-radius: 14px;
+  padding: 24px 22px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
@@ -86,20 +47,28 @@ body {
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .card h3 {
-  color: #333;
-  margin-bottom: 12px;
+  color: #222;
+  margin: 10px 0 12px;
 }
 
 .card p {
   color: #555;
   font-size: 0.95rem;
+  line-height: 1.55;
 }
 
+/* Project icons */
 .icon {
   color: #d16ba5;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+/* Headings */
+#projects h2 {
+  color: #1a1a40;
+  margin: 0 0 26px;
 }
