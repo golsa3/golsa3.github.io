@@ -8,20 +8,24 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Fixed Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="top-contact">
+
+  <!-- Top Contact Strip -->
+  <div class="top-contact">
     <a href="mailto:haftsavargol@gmail.com"><i class="fas fa-envelope"></i> haftsavargol@gmail.com</a>
-    <a href="tel:+1234567890"><i class="fas fa-phone"></i> (123) 456-7890</a>
-    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="tel:5714888313"><i class="fas fa-phone"></i> (571) 488-8313</a>
+    <a href="https://www.linkedin.com/in/golsa-h-946771208/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/golsa3" target="_blank"><i class="fab fa-github"></i> GitHub</a>
   </div>
   
+  <!-- Hero Section -->
   <header class="hero">
     <button id="toggle-theme">🌓</button>
 
-        <div class="container">
+    <div class="container">
       <h1 class="name">Golsa Haftsavar</h1>
       <p class="subtitle">Graduating early • SWE / UX Engineer • AI • Systems • Multi-Agent Design</p>
       <p class="philosophy">
@@ -32,62 +36,66 @@
     </div>
   </header>
 
+  <!-- Projects Section -->
   <main class="projects-section">
     <div class="container">
       <h2>Featured Projects</h2>
       <div class="projects-grid">
-        
-     <div class="card">
-  <h3><i class="fas fa-stethoscope icon"></i> MediMind – AI Clinical Assistant</h3>
-  <p>Multi-agent workflow improving clinician review speed (~25% in pilot). Streamlit frontend, geolocation, Firebase auth, and PDF export.</p>
-  <a href="#">GitHub</a> • <a href="#">Demo</a>
-</div>
 
-<div class="card">
-  <h3><i class="fas fa-tasks icon"></i> Workload – Task Planning Assistant</h3>
-  <p>Lightweight planner prioritizing tasks by effort × impact, with focus hints and prompts. Built in Python + rapid web UI.</p>
-  <a href="#">GitHub</a>
-</div>
+        <div class="card">
+          <h3><i class="fas fa-stethoscope icon"></i> MediMind – AI Clinical Assistant</h3>
+          <p>Multi-agent workflow improving clinician review speed (~25% in pilot). Streamlit frontend, geolocation, Firebase auth, and PDF export.</p>
+          <a href="https://github.com/golsa3/MediMind" target="_blank">GitHub</a> • 
+          <a href="https://youtu.be/tMaGt4zxxGI" target="_blank">Demo</a>
+        </div>
 
-<div class="card">
-  <h3><i class="fas fa-robot icon"></i> Git AI Assistant</h3>
-  <p>CLI helper drafting commit messages, PR descriptions, and summaries using structured diffs and prompt templates.</p>
-  <a href="#">GitHub</a>
-</div>
+        <div class="card">
+          <h3><i class="fas fa-tasks icon"></i> Workload – Task Planning Assistant</h3>
+          <p>Lightweight planner prioritizing tasks by effort × impact, with focus hints and prompts. Built in Python + rapid web UI.</p>
+          <a href="https://github.com/golsa3/Workload-Planner" target="_blank">GitHub</a>
+        </div>
 
-<div class="card">
-  <h3><i class="fas fa-music icon"></i> Improved Apple Music Autoplay</h3>
-  <p>Enhanced transitions, genre matching, and adaptive queue updates for better listening experience.</p>
-  <a href="#">GitHub</a>
-</div>
+        <div class="card">
+          <h3><i class="fas fa-robot icon"></i> Git AI Assistant</h3>
+          <p>CLI helper drafting commit messages, PR descriptions, and summaries using structured diffs and prompt templates.</p>
+          <a href="https://github.com/golsa3/Git-AI-Assistant" target="_blank">GitHub</a>
+        </div>
 
-<div class="card">
-  <h3><i class="fas fa-globe icon"></i> Personal Portfolio Website</h3>
-  <p>Responsive HTML/CSS/JS portfolio with elegant animations, resume integration, and project showcase.</p>
-  <a href="#">GitHub</a>
-</div>
+        <div class="card">
+          <h3><i class="fas fa-music icon"></i> Improved Apple Music Autoplay</h3>
+          <p>Enhanced transitions, genre matching, and adaptive queue updates for better listening experience.</p>
+          <a href="https://github.com/golsa3/AppleMusic-Autoplay" target="_blank">GitHub</a>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-globe icon"></i> Personal Portfolio Website</h3>
+          <p>Responsive HTML/CSS/JS portfolio with elegant animations, resume integration, and project showcase.</p>
+          <a href="https://github.com/golsa3/Portfolio-Site" target="_blank">GitHub</a>
+        </div>
 
       </div>
     </div>
   </main>
+
+  <!-- Dark Mode Script -->
   <script>
-  const toggleBtn = document.getElementById('toggle-theme');
-  const body = document.body;
+    const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
 
-  // Check saved theme
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark');
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    if (body.classList.contains('dark')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.removeItem('theme');
+    // Check saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
     }
-  });
-</script>
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.removeItem('theme');
+      }
+    });
+  </script>
 
 </body>
 </html>
