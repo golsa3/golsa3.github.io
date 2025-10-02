@@ -1,249 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golsa Haftsavar | Portfolio</title>:root{
-  --pink-50:#fff5f9;
-  --pink-100:#ffeaf2;
-  --pink-300:#ffc9dd;
-  --pink-500:#ff8fb8;
-  --ink:#16161a;
-  --ink-2:#2a2a33;
-  --muted:#5b5b66;
-  --card:#ffffff;
-  --ring: rgba(255,143,184,0.35);
-}
-
-*{ box-sizing:border-box; }
-
-html,body{
-  margin:0;
-  padding:0;
-  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;
-  color:var(--ink);
-  background:
-    radial-gradient(1200px 800px at 10% -10%, var(--pink-100), transparent 60%),
-    radial-gradient(1000px 700px at 100% 0%, var(--pink-50), transparent 55%),
-    var(--pink-50);
-  line-height:1.5;
-}
-
-.container{
-  max-width:1100px;
-  padding:0 20px;
-  margin:0 auto;
-}
-
-/* Hero */
-.hero{
-  background:
-    linear-gradient(180deg, var(--pink-100), transparent 70%),
-    var(--pink-50);
-  padding:72px 0 32px;
-}
-
-.hero-inner{
-  display:flex;
-  align-items:center;
-  gap:24px;
-}
-
-.hero h1{
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height:1.1;
-  margin:0 0 8px;
-  font-weight:800;
-}
-
-.subtitle{
-  margin:0 0 16px;
-  color:var(--muted);
-  font-weight:600;
-}
-
-.lede{
-  font-size:1.05rem;
-  margin:0 0 20px;
-  max-width: 70ch;
-}
-
-.lede em{
-  font-style:italic;
-  background:linear-gradient(90deg, var(--pink-300), transparent);
-  padding:0 .25rem;
-  border-radius:.35rem;
-}
-
-.cta-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.btn{
-  appearance:none;
-  border:none;
-  background:var(--ink);
-  color:white;
-  padding:10px 14px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-  transition: transform .04s ease, box-shadow .2s ease;
-  box-shadow: 0 6px 20px var(--ring);
-}
-
-.btn:hover{ transform: translateY(-1px); }
-.btn:active{ transform: translateY(0); }
-
-.btn.ghost{
-  background:white;
-  color:var(--ink);
-  border:1px solid var(--pink-300);
-}
-
-/* Sections */
-.section{
-  padding:40px 0 24px;
-}
-
-.section h2{
-  font-size:1.6rem;
-  margin:0 0 16px;
-}
-
-/* Grid + Cards */
-.grid{
-  display:grid;
-  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
-  gap:16px;
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--pink-100);
-  padding:18px;
-  border-radius:16px;
-  box-shadow: 0 10px 30px var(--ring);
-}
-
-.card h3{
-  margin:0 0 8px;
-  font-size:1.15rem;
-}
-
-.card p{ margin:0 0 10px; }
-
-.card .note{
-  color:var(--muted);
-  font-size:.95rem;
-}
-
-.links{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.links a{
-  color:#0f62fe;
-  text-decoration:none;
-  font-weight:600;
-}
-
-.links a:hover{ text-decoration:underline; }
-
-/* Bullets */
-.bullets{
-  margin:8px 0 0;
-  padding-left: 20px;
-}
-
-.bullets li{
-  margin:8px 0;
-}
-
-/* Footer */
-.footer{
-  padding:28px 0 40px;
-  color:var(--muted);
-  text-align:center;
-  border-top:1px solid var(--pink-100);
-}
-
-/* Responsive tweaks */
-@media (max-width: 720px){
-  .hero { padding:56px 0 24px; }
-  .hero-inner{ flex-direction:column; align-items:flex-start; }
-}
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golsa Haftsavar | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>Golsa Haftsavar</h1>
-      <p>Graduating early | SWE/UX Engineer | Passionate about AI, Systems & Multi-Agent Design</p>
+  <!-- Header / Hero -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Golsa Haftsavar</h1>
+        <p class="subtitle">Graduating early · SWE / UX Engineer · AI • Systems • Multi-Agent Design</p>
+
+        <p class="lede">
+          I don’t believe problems are ever <em>“just one thing.”</em>  
+          I look for the hidden variables — technical, human, and contextual — and weave them into solutions.  
+          That mindset shows up in everything I build: rigorous engineering, thoughtful UX, and measurable impact.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="mailto:haftsavargol@gmail.com">Email</a>
+          <a class="btn ghost" href="https://github.com/golsa3" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://linkedin.com/in/golsa-h-946771208/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn ghost" href="Haftsavar_Golsa_VT_CS_Sept_30_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
+  <!-- Featured Projects -->
+  <section id="projects" class="container section">
     <h2>Featured Projects</h2>
     <div class="grid">
-      
-      <div class="card">
+
+      <article class="card">
         <h3>MediMind – AI Clinical Assistant</h3>
-        <p>Multi-agent system in Streamlit improving clinician review speed by ~25%. Includes geolocation, Firebase auth, and PDF report generation.</p>
-        <a href="https://github.com/golsa3/MediMind" target="_blank">GitHub Repo</a> | 
-        <a href="https://youtu.be/tMaGt4zxxGI" target="_blank">Live Demo</a>
-      </div>
+        <p>
+          Multi-agent workflow that improves clinician review speed (~25% in pilot). 
+          Streamlit front-end, geolocation, Firebase auth, PDF export.
+        </p>
+        <div class="links">
+          <a href="https://github.com/golsa3/MediMind" target="_blank" rel="noreferrer">GitHub</a>
+          <span>·</span>
+          <a href="https://youtu.be/tMaGt4zxxGI" target="_blank" rel="noreferrer">Demo</a>
+        </div>
+      </article>
 
-      <div class="card">
-        <h3>Minibash – Custom C Shell</h3>
-        <p>Implemented parsing & execution (pipes, redirects, if/loops) in C using Tree-Sitter. Supports variable expansion and job control.</p>
-        <a href="https://github.com/golsa3/minibash" target="_blank">GitHub Repo</a>
-      </div>
-
-      <div class="card">
+      <article class="card">
         <h3>RLHF + Prompt Engineering</h3>
-        <p>Curated 1,000+ prompts and automated reasoning pipelines with OR-Tools + Z3. Reduced hallucinations by improving evaluation throughput.</p>
-        <span class="note">Code samples available on request (confidential data).</span>
-      </div>
+        <p>
+          Curated high-quality prompt/response data and automated reasoning pipelines (OR-Tools, Z3) to improve eval throughput and reduce hallucinations.
+        </p>
+        <p class="note">Code samples available on request (confidential data).</p>
+      </article>
 
-      <div class="card">
+      <article class="card">
+        <h3>Workload – Task Planning Assistant</h3>
+        <p>
+          Lightweight planner that prioritizes tasks by effort × impact with time-boxing hints and focus prompts. 
+          Built with Python + small web UI for rapid iteration.
+        </p>
+        <div class="links">
+          <a href="https://github.com/golsa3/workload" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Git AI Assistant</h3>
+        <p>
+          A CLI helper that drafts commit messages, PR descriptions, and change summaries using structured diffs and prompt templates for clarity and speed.
+        </p>
+        <div class="links">
+          <a href="https://github.com/golsa3/git-ai-assistant" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Improved Apple Music Autoplay</h3>
+        <p>
+          Experimental recommender tweaks autoplay sequences by blending recency, diversity, and energy metrics; explores session-aware ranking.
+        </p>
+        <div class="links">
+          <a href="https://github.com/golsa3/apple-music-autoplay" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card">
         <h3>Personal Portfolio Website</h3>
-        <p>Responsive HTML/CSS/JS site with 100% Lighthouse performance score. Hosted on GitHub Pages.</p>
-        <a href="https://github.com/golsa3/portfolio" target="_blank">GitHub Repo</a>
-      </div>
+        <p>
+          Responsive HTML/CSS/JS site with a 100% Lighthouse performance score. Built to be fast, skimmable, and accessible.
+        </p>
+        <div class="links">
+          <a href="https://github.com/golsa3/portfolio" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </article>
 
     </div>
   </section>
 
   <!-- Other Highlights -->
-  <section id="highlights" class="container">
-    <h2>Other Highlights</h2>
-    <ul>
-      <li>Hackathon Winner – Boosted study efficiency 60% with Pomodoro Study Helper web app.</li>
-      <li>Engineering TA – Mentored 160+ students in Arduino, circuits, and debugging.</li>
-      <li>BioCode Competition – Built real-time clinical decision logic in Python.</li>
-      <li>Mentor – Led CS & Cybersecurity Club projects on APIs & backend integration.</li>
+  <section id="highlights" class="container section">
+    <h2>Highlights</h2>
+    <ul class="bullets">
+      <li>Hackathon: boosted study efficiency 60% for 50+ students with a Pomodoro web app.</li>
+      <li>Engineering TA: taught 160+ students (Arduino, circuits, debugging) with live demos & 1:1 support.</li>
+      <li>BioCode Competition: authored real-time clinical decision logic in Python under time constraints.</li>
+      <li>Mentor: led CS & Cybersecurity Club projects on APIs, databases, and backend integration.</li>
     </ul>
   </section>
 
-  <!-- Contact -->
-  <footer>
+  <footer class="footer">
     <div class="container">
-      <h2>Contact</h2>
-      <p>
-        <a href="mailto:haftsavargol@gmail.com">Email</a> |
-        <a href="https://github.com/golsa3" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/golsa-h-946771208/" target="_blank">LinkedIn</a> |
-        <a href="Haftsavar_Golsa_VT_CS_Sept_30_Resume.pdf" target="_blank">Resume</a>
-      </p>
+      <p>© <span id="year"></span> Golsa Haftsavar</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
