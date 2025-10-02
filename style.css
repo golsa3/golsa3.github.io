@@ -9,9 +9,14 @@ body {
 
 /* Header */
 .hero {
-  background: linear-gradient(135deg, #f9b4d0, #f8cdda);
+  background: #d36b8b; /* darker, professional pink */
   padding: 60px 20px;
   text-align: center;
+  color: #fff;
+}
+.highlight {
+  color: #ff4f91; /* solid bold pink, no gradient */
+  font-weight: 600;
 }
 
 .name {
