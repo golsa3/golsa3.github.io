@@ -1,3 +1,52 @@
+body.dark {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark .hero {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark .card {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+body.dark .subtitle,
+body.dark .philosophy,
+body.dark .card p {
+  color: #cccccc;
+}
+
+body.dark .card h3,
+body.dark .highlight {
+  color: #ffb6d9;
+}
+
+body.dark .contact-links a {
+  color: #ffffff;
+}
+
+body.dark .projects-section h2 {
+  color: #ffb6d9;
+}
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+#toggle-theme:hover {
+  transform: scale(1.2);
+}
+
 :root {
   --primary-pink: #f28cb1;
   --background-pink: #ffe4ec;
