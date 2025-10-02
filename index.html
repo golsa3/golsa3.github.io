@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Golsa Haftsavar | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Header / Hero -->
+  <!-- Hero -->
   <header class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <h1>Golsa Haftsavar</h1>
+        <h1 class="brand">Golsa Haftsavar</h1>
         <p class="subtitle">Graduating early · SWE / UX Engineer · AI • Systems • Multi-Agent Design</p>
 
         <p class="lede">
-          I don’t believe problems are ever <em>“just one thing.”</em>  
-          I look for the hidden variables — technical, human, and contextual — and weave them into solutions.  
+          I don’t believe problems are ever <em>“just one thing.”</em>
+          I look for the hidden variables — technical, human, and contextual — and weave them into solutions.
           That mindset shows up in everything I build: rigorous engineering, thoughtful UX, and measurable impact.
         </p>
 
-        <div class="cta-row">
-          <a class="btn" href="mailto:haftsavargol@gmail.com">Email</a>
-          <a class="btn ghost" href="https://github.com/golsa3" target="_blank">GitHub</a>
-          <a class="btn ghost" href="https://linkedin.com/in/golsa-h-946771208/" target="_blank">LinkedIn</a>
-          <a class="btn ghost" href="Haftsavar_Golsa_VT_CS_Sept_30_Resume.pdf" target="_blank">Resume</a>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <a class="contact-link" href="mailto:haftsavargol@gmail.com">haftsavargol@gmail.com</a>
+          <span class="dot">•</span>
+          <a class="contact-link" href="https://github.com/golsa3" target="_blank" rel="noreferrer">GitHub</a>
+          <span class="dot">•</span>
+          <a class="contact-link" href="https://linkedin.com/in/golsa-h-946771208/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <span class="dot">•</span>
+          <a class="contact-link" href="Haftsavar_Golsa_VT_CS_Sept_30_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         </div>
       </div>
     </div>
+    <div class="hero-wave" aria-hidden="true"></div>
   </header>
 
-  <!-- Featured Projects -->
+  <!-- Projects -->
   <section id="projects" class="container section">
-    <h2>Featured Projects</h2>
+    <div class="section-head">
+      <h2>Featured Projects</h2>
+      <div class="tags-hint">Selected work · built for speed, clarity, and UX</div>
+    </div>
+
     <div class="grid">
 
+      <!-- MediMind -->
       <article class="card">
-        <h3>MediMind – AI Clinical Assistant</h3>
+        <div class="card-head">
+          <div class="icon">
+            <!-- stethoscope + nodes -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="36" cy="12" r="6" stroke="currentColor" stroke-width="2"/>
+              <path d="M32 16c0 8-4 16-12 16S8 24 8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 8v8a8 8 0 0 0 16 0V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M24 40c0-4 4-6 8-6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>MediMind – AI Clinical Assistant</h3>
+        </div>
         <p>
-          Multi-agent workflow that improves clinician review speed (~25% in pilot). 
+          Multi-agent workflow that improves clinician review speed (~25% in pilot).
           Streamlit front-end, geolocation, Firebase auth, PDF export.
         </p>
+        <div class="badges">
+          <span>Python</span><span>Streamlit</span><span>Agents</span>
+        </div>
         <div class="links">
           <a href="https://github.com/golsa3/MediMind" target="_blank" rel="noreferrer">GitHub</a>
           <span>·</span>
@@ -50,55 +74,138 @@
         </div>
       </article>
 
+      <!-- Workload -->
       <article class="card">
-        <h3>Workload – Task Planning Assistant</h3>
+        <div class="card-head">
+          <div class="icon">
+            <!-- calendar/clock -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M6 18h36" stroke="currentColor" stroke-width="2"/>
+              <circle cx="30" cy="30" r="8" stroke="currentColor" stroke-width="2"/>
+              <path d="M30 26v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Workload – Task Planning Assistant</h3>
+        </div>
         <p>
-          Lightweight planner that prioritizes tasks by effort × impact with time-boxing hints and focus prompts. 
-          Built with Python + small web UI for rapid iteration.
+          Planner that prioritizes tasks by effort × impact with time-boxing hints and focus prompts.
+          Python core + small web UI for rapid iteration.
         </p>
+        <div class="badges">
+          <span>Python</span><span>Prioritization</span><span>UX</span>
+        </div>
         <div class="links">
           <a href="https://github.com/golsa3/workload" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </article>
 
+      <!-- Git AI Assistant -->
       <article class="card">
-        <h3>Git AI Assistant</h3>
+        <div class="card-head">
+          <div class="icon">
+            <!-- git branch + spark -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+              <circle cx="34" cy="38" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 14v10c0 6 6 6 12 6h4" stroke="currentColor" stroke-width="2"/>
+              <path d="M32 8l2 3 3 2-3 2-2 3-2-3-3-2 3-2 2-3z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Git AI Assistant</h3>
+        </div>
         <p>
-          A CLI helper that drafts commit messages, PR descriptions, and change summaries using structured diffs and prompt templates for clarity and speed.
+          CLI helper that drafts commit messages, PR descriptions, and change summaries using structured diffs and prompt templates.
         </p>
+        <div class="badges">
+          <span>CLI</span><span>LLM Prompts</span><span>DevEx</span>
+        </div>
         <div class="links">
           <a href="https://github.com/golsa3/git-ai-assistant" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </article>
 
+      <!-- Apple Music -->
       <article class="card">
-        <h3>Improved Apple Music Autoplay</h3>
+        <div class="card-head">
+          <div class="icon">
+            <!-- waveform / play -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M10 30V18M18 34V14M26 28V20M34 36V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M40 24l6 4v-8l-6 4z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Improved Apple Music Autoplay</h3>
+        </div>
         <p>
-          Experimental recommender tweaks autoplay sequences by blending recency, diversity, and energy metrics; explores session-aware ranking.
+          Experimental recommender that blends recency, diversity, and energy for session-aware autoplay.
         </p>
+        <div class="badges">
+          <span>Ranking</span><span>Recsys</span>
+        </div>
         <div class="links">
           <a href="https://github.com/golsa3/apple-music-autoplay" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </article>
 
+      <!-- Portfolio -->
       <article class="card">
-        <h3>Personal Portfolio Website</h3>
+        <div class="card-head">
+          <div class="icon">
+            <!-- window -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M6 18h36" stroke="currentColor" stroke-width="2"/>
+              <circle cx="14" cy="14" r="2" fill="currentColor"/>
+              <circle cx="20" cy="14" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+        </div>
         <p>
-          Responsive HTML/CSS/JS site with a 100% Lighthouse performance score. Built to be fast, skimmable, and accessible.
+          Responsive HTML/CSS/JS with a 100% Lighthouse performance score. Built to be fast, skimmable, and accessible.
         </p>
+        <div class="badges">
+          <span>HTML</span><span>CSS</span><span>JS</span>
+        </div>
         <div class="links">
           <a href="https://github.com/golsa3/portfolio" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </article>
 
+      <!-- RLHF -->
+      <article class="card">
+        <div class="card-head">
+          <div class="icon">
+            <!-- nodes/graph -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" fill="currentColor"/>
+              <circle cx="36" cy="12" r="4" fill="currentColor"/>
+              <circle cx="24" cy="36" r="4" fill="currentColor"/>
+              <path d="M16 12h16M13 15l9 18M35 15l-9 18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>RLHF + Prompt Engineering</h3>
+        </div>
+        <p>
+          Curated high-quality prompt/response sets and automated reasoning pipelines (OR-Tools, Z3) to improve eval throughput and reduce hallucinations.
+        </p>
+        <div class="badges">
+          <span>OR-Tools</span><span>Z3</span><span>LLM Eval</span>
+        </div>
+        <p class="note">Code samples available on request (confidential data).</p>
+      </article>
+
     </div>
   </section>
 
-  <!-- Other Highlights -->
+  <!-- Highlights -->
   <section id="highlights" class="container section">
-    <h2>Highlights</h2>
+    <div class="section-head">
+      <h2>Highlights</h2>
+    </div>
     <ul class="bullets">
-      <li>Hackathon project: designed a Pomodoro Study Helper web app that improved study efficiency by 60% for 50+ students.</li>
+      <li>Hackathon: boosted study efficiency 60% for 50+ students with a Pomodoro web app.</li>
       <li>Engineering TA: taught 160+ students (Arduino, circuits, debugging) with live demos & 1:1 support.</li>
       <li>BioCode Competition: authored real-time clinical decision logic in Python under time constraints.</li>
       <li>Mentor: led CS & Cybersecurity Club projects on APIs, databases, and backend integration.</li>
