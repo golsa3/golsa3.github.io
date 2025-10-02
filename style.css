@@ -1,3 +1,24 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.card:hover .icon {
+  animation: bounce 0.6s ease;
+  color: #ff4f8b; /* brighten on hover */
+}
+
+
 body.dark {
   background: #1a1a1a;
   color: #f0f0f0;
@@ -86,26 +107,44 @@ header.hero {
 }
 
 .name {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 3.8rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffffff, #ffd6e8, #ff99cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease forwards;  /* fade/slide in */
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-  color: #fdfdfd;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff9fb;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.4s; /* appear after name */
 }
 
 .philosophy {
+  max-width: 1000px;
   margin: 1.5rem auto;
-  font-size: 1rem;
-  max-width: 700px;
-  color: #fff5f8;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fffdfa;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.8s; /* appear after subtitle */
 }
 
+
 .highlight {
-  color: #ffd6e8;
-  font-weight: bold;
+  color: #ffe2f0;            /* pastel highlight */
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .contact-links {
@@ -141,39 +180,53 @@ header.hero {
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 5px 15px var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover Animation */
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px var(--shadow);
+  transform: translateY(-10px) rotateX(3deg) rotateY(-3deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.card .icon {
-  font-size: 2rem;
-  color: var(--primary-pink);
-  margin-bottom: 0.5rem;
+/* Subtle glow effect */
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 15px;
+  background: linear-gradient(120deg, rgba(255, 182, 219, 0.3), rgba(255, 218, 233, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
-  color: var(--accent);
+.card:hover::after {
+  opacity: 1;
 }
 
-.card p {
-  font-size: 0.95rem;
-  color: var(--text-light);
-  margin-bottom: 1rem;
-}
-
+/* Links inside card */
 .card a {
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
-  margin-right: 0.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.card .icon {
+  font-size: 2.2rem;
+  color: var(--primary-pink);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+.card:hover .icon {
+  transform: scale(1.2) rotate(8deg);
 }
 
 .card a:hover {
-  text-decoration: underline;
+  color: #ff4f8b;
 }
