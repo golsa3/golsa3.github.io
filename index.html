@@ -11,6 +11,8 @@
 </head>
 <body>
   <header class="hero">
+    <button id="toggle-theme">🌓</button>
+
     <div class="container">
       <h1 class="name">Golsa Haftsavar</h1>
       <p class="subtitle">Graduating early • SWE / UX Engineer • AI • Systems • Multi-Agent Design</p>
@@ -65,5 +67,24 @@
       </div>
     </div>
   </main>
+  <script>
+  const toggleBtn = document.getElementById('toggle-theme');
+  const body = document.body;
+
+  // Check saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    if (body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.removeItem('theme');
+    }
+  });
+</script>
+
 </body>
 </html>
