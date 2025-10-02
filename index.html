@@ -1,76 +1,156 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golsa Haftsavar | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Golsa Haftsavar • Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Hero -->
   <header class="hero">
-    <div class="container center">
-      <h1 class="name">Golsa Haftsavar</h1>
-      <p class="subtitle">Graduating early • SWE / UX Engineer • AI • Systems • Multi-Agent Design</p>
-      <p class="statement">
-        I don’t believe problems are ever <span class="highlight">"just one thing."</span>  
-        I look for hidden variables — technical, human, and contextual — and weave them into solutions.  
-        That mindset shows up in everything I build: rigorous engineering, thoughtful UX, and measurable impact.
+    <div class="container hero__inner">
+      <h1 class="hero__title">Golsa Haftsavar</h1>
+      <p class="hero__strap">Graduating early • SWE / UX Engineer • AI • Systems • Multi-Agent Design</p>
+
+      <p class="hero__statement">
+        I don’t believe problems are ever <mark>“just one thing.”</mark>
+        I look for hidden variables—technical, human, and contextual—and
+        weave them into solutions. That mindset shows up in everything I build:
+        rigorous engineering, thoughtful UX, and measurable impact.
       </p>
-      <div class="contact-links">
-        <a href="mailto:haftsavargol@gmail.com">haftsavargol@gmail.com</a> |
-        <a href="https://github.com/golsa3" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-        <a href="https://linkedin.com/in/golsa-h-946771208/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-        <a href="Haftsavar_Golsa_VT_CS_Sept_30_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
-      </div>
+
+      <p class="hero__links">
+        <span class="hero__email"><i class="ri-mail-line"></i> haftsavargol@gmail.com</span>
+        <a href="https://github.com/golsa3" target="_blank"><i class="ri-github-line"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/golsa-h-946771208/" target="_blank"><i class="ri-linkedin-box-line"></i> LinkedIn</a>
+        <a href="Haftsavar_Golsa_VT_CS_Sept_30_Resume.pdf" target="_blank"><i class="ri-file-text-line"></i> Resume</a>
+      </p>
     </div>
   </header>
 
+  <!-- About / Skills / Experience -->
+  <section class="container about">
+    <div class="about__grid">
+      <div class="about__card">
+        <h2 class="section__title"><i class="ri-user-3-line"></i> About</h2>
+        <p>
+          B.S. Computer Science (’26) and MEng in progress (’27) at Virginia Tech, graduating a year early.
+          Teaching Assistant experience and strong systems + HCI grounding. I design and implement end-to-end
+          solutions—from parsing and process control to multi-agent UI flows—then validate impact with metrics.
+        </p>
+      </div>
+
+      <div class="about__card">
+        <h2 class="section__title"><i class="ri-tools-line"></i> Skills</h2>
+        <ul class="tags">
+          <li>Python</li><li>Java</li><li>C/C++</li><li>JavaScript/TypeScript</li>
+          <li>React</li><li>Streamlit</li><li>Flask</li><li>Tailwind</li>
+          <li>Firebase</li><li>PostgreSQL</li><li>GCP</li>
+          <li>Data Structures & Algorithms</li>
+          <li>UI/UX & Prototyping</li><li>Multi-Agent Systems</li>
+        </ul>
+      </div>
+
+      <div class="about__card">
+        <h2 class="section__title"><i class="ri-briefcase-line"></i> Experience</h2>
+        <ul class="list">
+          <li><strong>Model Validation (MOVE), Handshake</strong> — Curated/evaluated RLHF prompt-response data and partnered with ML Ops to reduce hallucinations and improve alignment consistency.</li>
+          <li><strong>AI Trainer, Alignerr</strong> — Built Python pipelines with OR-Tools + Z3 to generate/score reasoning problems; integrated solvers into feedback loops to speed evaluation.</li>
+          <li><strong>Coding Contributor, Uber AI Scaled Solutions</strong> — Production-grade coding/QA across domains (autonomous vehicles, gen-AI, CV) with distributed teams.</li>
+          <li><strong>Engineering UTA, Virginia Tech</strong> — Taught Arduino/circuits to 160+ students; raised lab proficiency and project completion rates.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- (Content summarized from résumé.) --> <!-- :contentReference[oaicite:1]{index=1} -->
+  </section>
+
   <!-- Projects -->
-  <section id="projects" class="container">
-    <h2>Featured Projects</h2>
+  <section class="container">
+    <h2 class="section__heading">Featured Projects</h2>
+
     <div class="grid">
+      <article class="card">
+        <div class="card__icon"><i class="ri-stethoscope-line"></i></div>
+        <h3 class="card__title">MediMind – AI Clinical Assistant</h3>
+        <p class="card__desc">
+          Multi-agent workflow that improves clinician review speed (~25% in pilot).
+          Streamlit frontend, geolocation, Firebase auth, PDF export.
+        </p>
+        <p class="card__links">
+          <a href="https://github.com/golsa3/MediMind" target="_blank">GitHub</a>
+          <span class="dot">•</span>
+          <a href="https://youtu.be/tMaGt4zxxGI" target="_blank">Demo</a>
+        </p>
+      </article>
 
-      <div class="card">
-        <i class="fas fa-stethoscope fa-2x icon"></i>
-        <h3>MediMind – AI Clinical Assistant</h3>
-        <p>Multi-agent workflow that improves clinician review speed (~25% in pilot). Streamlit frontend, geolocation, Firebase auth, PDF export.</p>
-        <a href="https://github.com/golsa3/MediMind" target="_blank">GitHub</a> • 
-        <a href="https://youtu.be/tMaGt4zxxGI" target="_blank">Demo</a>
-      </div>
+      <article class="card">
+        <div class="card__icon"><i class="ri-task-line"></i></div>
+        <h3 class="card__title">Workload – Task Planning Assistant</h3>
+        <p class="card__desc">
+          Lightweight planner that prioritizes tasks by effort × impact with
+          time-boxing hints and focus prompts. Python + small web UI.
+        </p>
+        <p class="card__links">
+          <a href="https://github.com/golsa3/workload" target="_blank">GitHub</a>
+        </p>
+      </article>
 
-      <div class="card">
-        <i class="fas fa-tasks fa-2x icon"></i>
-        <h3>Workload – Task Planning Assistant</h3>
-        <p>Lightweight planner prioritizing tasks by effort × impact, with focus hints and prompts. Built in Python + rapid web UI.</p>
-        <a href="https://github.com/golsa3/workload" target="_blank">GitHub</a>
-      </div>
+      <article class="card">
+        <div class="card__icon"><i class="ri-git-commit-line"></i></div>
+        <h3 class="card__title">Git AI Assistant</h3>
+        <p class="card__desc">
+          CLI helper that drafts commit messages, PR descriptions, and change summaries
+          using structured diffs and prompt templates for clarity and speed.
+        </p>
+        <p class="card__links">
+          <a href="https://github.com/golsa3/git-ai-assistant" target="_blank">GitHub</a>
+        </p>
+      </article>
 
-      <div class="card">
-        <i class="fas fa-robot fa-2x icon"></i>
-        <h3>Git AI Assistant</h3>
-        <p>CLI helper that drafts commit messages, PR descriptions, and summaries using structured diffs and prompt templates.</p>
-        <a href="https://github.com/golsa3/git-ai-assistant" target="_blank">GitHub</a>
-      </div>
+      <article class="card">
+        <div class="card__icon"><i class="ri-music-2-line"></i></div>
+        <h3 class="card__title">Improved Apple Music Autoplay</h3>
+        <p class="card__desc">
+          Graph-based session manager + voice assistant linking 100+ song transitions to
+          keep flow coherent; dynamically adapts recommendations mid-session.
+        </p>
+        <p class="card__links">
+          <a href="https://github.com/golsa3/apple-music-autoplay" target="_blank">GitHub</a>
+        </p>
+      </article>
 
-      <div class="card">
-        <i class="fas fa-music fa-2x icon"></i>
-        <h3>Improved Apple Music Autoplay</h3>
-        <p>Enhanced autoplay queue that dynamically updates after manual changes, improving listening flow and personalization.</p>
-        <a href="https://github.com/golsa3/applemusic-autoplay" target="_blank">GitHub</a>
-      </div>
-
-      <div class="card">
-        <i class="fas fa-globe fa-2x icon"></i>
-        <h3>Personal Portfolio Website</h3>
-        <p>Responsive HTML/CSS/JS site with 100% Lighthouse score. Hosted on GitHub Pages.</p>
-        <a href="https://github.com/golsa3/portfolio" target="_blank">GitHub</a>
-      </div>
-
+      <article class="card">
+        <div class="card__icon"><i class="ri-global-line"></i></div>
+        <h3 class="card__title">Personal Portfolio Website</h3>
+        <p class="card__desc">
+          Responsive HTML/CSS/JS site with 100% Lighthouse performance score. GitHub Pages hosting.
+        </p>
+        <p class="card__links">
+          <a href="https://github.com/golsa3/portfolio" target="_blank">GitHub</a>
+        </p>
+      </article>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Golsa Haftsavar</p>
+      <p>
+        <a href="https://github.com/golsa3" target="_blank"><i class="ri-github-line"></i></a>
+        <a href="https://www.linkedin.com/in/golsa-h-946771208/" target="_blank"><i class="ri-linkedin-box-line"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
- 
