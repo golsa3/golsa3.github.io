@@ -266,3 +266,23 @@ header.hero {
 .card a:hover {
   color: #ff4f8b;
 }
+/* Ensure the glow overlay never blocks clicks */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: linear-gradient(120deg, rgba(255, 182, 219, 0.3), rgba(255, 218, 233, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;      /* << the key fix */
+}
+
+/* Optional: make links feel more like buttons */
+.card a {
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
