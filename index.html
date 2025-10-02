@@ -1,77 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golsa Haftsavar | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golsa Haftsavar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Header -->
   <header class="hero">
-    <div class="container center">
+    <div class="container">
       <h1 class="name">Golsa Haftsavar</h1>
       <p class="subtitle">Graduating early • SWE / UX Engineer • AI • Systems • Multi-Agent Design</p>
-      <p class="statement">
-        I don’t believe problems are ever <span class="highlight">"just one thing."</span><br>
-        I look for hidden variables — technical, human, and contextual — and weave them into solutions.<br>
+      <p class="philosophy">
+        I don’t believe problems are ever <span class="highlight">"just one thing."</span><br />
+        I look for hidden variables — technical, human, and contextual — and weave them into solutions.<br />
         That mindset shows up in everything I build: rigorous engineering, thoughtful UX, and measurable impact.
       </p>
       <div class="contact-links">
-        <span><i class="fas fa-envelope"></i> haftsavargol@gmail.com</span> |
-        <a href="https://github.com/golsa3" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-        <a href="https://linkedin.com/in/golsa-h-946771208/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-        <a href="Oct_2_New_Haftsavar_Golsa_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="mailto:haftsavargol@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
       </div>
     </div>
   </header>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
-    <h2>Featured Projects</h2>
-    <div class="grid">
-
-      <div class="card">
-        <i class="fas fa-stethoscope fa-2x icon"></i>
-        <h3>MediMind – AI Clinical Assistant</h3>
-        <p>Multi-agent workflow improving clinician review speed (~25% in pilot). Streamlit frontend, geolocation, Firebase auth, and PDF export.</p>
-        <a href="https://github.com/golsa3/MediMind" target="_blank">GitHub</a> • 
-        <a href="https://youtu.be/tMaGt4zxxGI" target="_blank">Demo</a>
+  <main class="projects-section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <i class="fas fa-stethoscope icon"></i>
+          <h3>MediMind – AI Clinical Assistant</h3>
+          <p>Multi-agent workflow improving clinician review speed (~25% in pilot). Streamlit frontend, geolocation, Firebase auth, and PDF export.</p>
+          <a href="https://github.com" target="_blank">GitHub</a> • <a href="#">Demo</a>
+        </div>
+        <div class="card">
+          <i class="fas fa-tasks icon"></i>
+          <h3>Workload – Task Planning Assistant</h3>
+          <p>Lightweight planner prioritizing tasks by effort × impact, with focus hints and prompts. Built in Python + rapid web UI.</p>
+          <a href="#">GitHub</a>
+        </div>
+        <div class="card">
+          <i class="fas fa-robot icon"></i>
+          <h3>Git AI Assistant</h3>
+          <p>CLI helper drafting commit messages, PR descriptions, and summaries using structured diffs and prompt templates.</p>
+          <a href="#">GitHub</a>
+        </div>
+        <div class="card">
+          <i class="fas fa-music icon"></i>
+          <h3>Improved Apple Music Autoplay</h3>
+          <p>Enhanced transitions, genre matching, and adaptive queue updates for better listening experience.</p>
+          <a href="#">GitHub</a>
+        </div>
+        <div class="card">
+          <i class="fas fa-globe icon"></i>
+          <h3>Personal Portfolio Website</h3>
+          <p>Responsive HTML/CSS/JS portfolio with elegant animations, resume integration, and project showcase.</p>
+          <a href="#">GitHub</a>
+        </div>
       </div>
-
-      <div class="card">
-        <i class="fas fa-tasks fa-2x icon"></i>
-        <h3>Workload – Task Planning Assistant</h3>
-        <p>Lightweight planner prioritizing tasks by effort × impact, with focus hints and prompts. Built in Python + rapid web UI.</p>
-        <a href="https://github.com/golsa3/workload" target="_blank">GitHub</a>
-      </div>
-
-      <div class="card">
-        <i class="fas fa-robot fa-2x icon"></i>
-        <h3>Git AI Assistant</h3>
-        <p>CLI helper drafting commit messages, PR descriptions, and summaries using structured diffs and prompt templates.</p>
-        <a href="https://github.com/golsa3/git-ai-assistant" target="_blank">GitHub</a>
-      </div>
-
-      <div class="card">
-        <i class="fas fa-music fa-2x icon"></i>
-        <h3>Improved Apple Music Autoplay</h3>
-        <p>Enhanced autoplay queue dynamically updating after manual changes, improving flow and personalization.</p>
-        <a href="https://github.com/golsa3/applemusic-autoplay" target="_blank">GitHub</a>
-      </div>
-
-      <div class="card">
-        <i class="fas fa-globe fa-2x icon"></i>
-        <h3>Personal Portfolio Website</h3>
-        <p>Responsive HTML/CSS/JS site with 100% Lighthouse score. Hosted on GitHub Pages.</p>
-        <a href="https://github.com/golsa3/portfolio" target="_blank">GitHub</a>
-      </div>
-
     </div>
-  </section>
+  </main>
 </body>
 </html>
