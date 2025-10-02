@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  background-color: #ffe6f0 !important; /* soft pink */
+  font-family: "Inter", sans-serif;
+  color: #16161a;
+}
+
+header.hero {
+  background-color: #ff99cc !important; /* stronger pink header */
+  color: white;
+}
 :root{
   --pink-light:#ffe6f0;
   --pink:#ffb3cc;
