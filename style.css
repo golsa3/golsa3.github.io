@@ -57,36 +57,41 @@ body {
 }
 
 /* Projects */
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
+#projects {
+  background: #fde4ec; /* light blush pink */
+  padding: 50px 20px;
+  border-top: 2px solid #f9c5d5;
+  border-bottom: 2px solid #f9c5d5;
 }
 
-h2 {
-  color: #333;
-  text-align: center;
+#projects h2 {
+  color: #1a1a40;
   margin-bottom: 30px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
+/* Project cards */
 .card {
-  background: #fff;
+  background: #fffdfd; /* soft off-white, warmer than pure white */
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
 }
 
 .icon {
